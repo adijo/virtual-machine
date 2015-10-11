@@ -17,7 +17,10 @@ public class Bytecode
 	public static final short GSTORE = 13;
 	public static final short PRINT = 14;
 	public static final short POP = 15;
-	public static final short HALT = 16;
+	public static final short CALL = 16;
+	public static final short RET = 17;
+	
+	public static final short HALT = 18;
 
 	public static class Instruction 
 	{
@@ -48,8 +51,9 @@ public class Bytecode
 		new Instruction("GSTORE", 1),
 		new Instruction("PRINT"),
 		new Instruction("POP"),
-		new Instruction("HALT")
-		
+		new Instruction("CALL", 1),
+		new Instruction("RET"),
+		new Instruction("HALT"),
 	};
 
 }
